@@ -1,0 +1,4 @@
+Kartın Üzerindeki İsim 
+Kartın Üzerindeki Soyad
+Kart Numarası
+CVC

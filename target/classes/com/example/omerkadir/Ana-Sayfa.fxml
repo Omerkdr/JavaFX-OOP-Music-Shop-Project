@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="829.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.omerkadir.AnaSayfaController">
+   <children>
+      <ImageView fitHeight="465.0" fitWidth="837.0" layoutX="-1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/LoginImage.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="712.0" layoutY="514.0" mnemonicParsing="false" onAction="#btnGirisSayfasiClick" prefHeight="52.0" prefWidth="116.0" text="Giriş Sayfası">
+         <effect>
+            <InnerShadow choke="0.55" height="36.26" radius="31.375" width="91.24" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="paneGecis" layoutX="-2.0" layoutY="-4.0" prefHeight="514.0" prefWidth="827.0">
+         <children>
+            <ImageView fitHeight="611.0" fitWidth="861.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/pianosepia.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="446.0" prefHeight="106.0" prefWidth="475.0" text="Music House">
+               <font>
+                  <Font name="Vladimir Script" size="77.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Button layoutX="494.0" layoutY="34.0" mnemonicParsing="false" onAction="#btnUygulamaGiris" prefHeight="90.0" prefWidth="284.0" style="-fx-border-color: fff; -fx-border-radius: 1200; -fx-background-color: transparemt;" text="Mağazaya Geç" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Pro" size="31.0" />
+               </font>
+            </Button>
+            <ProgressIndicator layoutX="15.0" layoutY="16.0" prefHeight="557.0" prefWidth="839.0" />
+            <Label fx:id="lblGirisMusicHouse" layoutX="202.0" layoutY="252.0" prefHeight="106.0" prefWidth="475.0">
+               <font>
+                  <Font name="Vladimir Script" size="77.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnaSayfaYardımcıPane" layoutX="-1.0" layoutY="-6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="827.0" visible="false">
+         <children>
+            <Label layoutX="194.0" layoutY="29.0" prefHeight="40.0" prefWidth="440.0" text="Size Nasıl Yardımcı Olabilirim ?" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Button layoutX="219.0" layoutY="237.0" mnemonicParsing="false" onAction="#btnSanatciClick" prefHeight="62.0" prefWidth="308.0" text="Sanatçılar">
+               <effect>
+                  <InnerShadow choke="0.55" height="36.26" radius="31.375" width="91.24" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button layoutX="219.0" layoutY="326.0" mnemonicParsing="false" onAction="#btnMagazaClick" prefHeight="62.0" prefWidth="308.0" text="Mağaza">
+               <effect>
+                  <InnerShadow choke="0.55" height="36.26" radius="31.375" width="91.24" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="imgSanatci" fitHeight="86.0" fitWidth="89.0" layoutX="535.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/Search.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgMagaza" fitHeight="73.0" fitWidth="72.0" layoutX="542.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/MusicStore.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="219.0" layoutY="420.0" mnemonicParsing="false" onAction="#btnHakkımızdaClick" prefHeight="62.0" prefWidth="308.0" text="Hakkımızda">
+               <effect>
+                  <InnerShadow choke="0.55" height="36.26" radius="31.375" width="91.24" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="imgMagaza1" fitHeight="73.0" fitWidth="72.0" layoutX="542.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/Bilgi.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="14.0" layoutY="452.0" mnemonicParsing="false" onAction="#btnBizKimiz" prefHeight="40.0" prefWidth="184.0" text="Biz Kimiz ?">
+               <effect>
+                  <InnerShadow choke="0.55" height="36.26" radius="31.375" width="91.24" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button layoutX="632.0" layoutY="452.0" mnemonicParsing="false" onAction="#btnAnket" prefHeight="50.0" prefWidth="194.0" text="Anketimize Katıl">
+               <effect>
+                  <InnerShadow choke="0.55" height="36.26" radius="31.375" width="91.24" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="SanatcılarPane" layoutX="-2.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="827.0" style="-fx-background-color: #000000;" visible="false">
+         <children>
+            <ImageView fitHeight="473.0" fitWidth="827.0" layoutX="-1.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/LoginImage.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgElvis" fitHeight="162.0" fitWidth="169.0" layoutX="24.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/Elvis.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgFloyd" fitHeight="220.0" fitWidth="238.0" layoutX="556.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/PinkFloyd.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgManco" fitHeight="170.0" fitWidth="184.0" layoutX="315.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/BarisManco.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="30.0" layoutY="221.0" mnemonicParsing="false" onAction="#btnElvisClick" prefHeight="51.0" prefWidth="184.0" text="Elvis Presley">
+               <effect>
+                  <InnerShadow height="0.59" radius="0.23249999999999993" width="2.34" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button layoutX="315.0" layoutY="221.0" mnemonicParsing="false" onAction="#btnBarisClick" prefHeight="51.0" prefWidth="184.0" text="Barış Manço">
+               <effect>
+                  <InnerShadow height="0.59" radius="0.23249999999999993" width="2.34" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button layoutX="578.0" layoutY="221.0" mnemonicParsing="false" onAction="#btnFloydClick" prefHeight="51.0" prefWidth="184.0" text="Pink Floyd">
+               <effect>
+                  <InnerShadow height="0.59" radius="0.23249999999999993" width="2.34" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Button>
+            <AnchorPane fx:id="PaneElvisBilgi" layoutX="38.0" layoutY="280.0" prefHeight="254.0" prefWidth="738.0" visible="false">
+               <children>
+                  <Label fx:id="lblElvisUyruk" layoutX="32.0" layoutY="79.0" prefHeight="26.0" prefWidth="690.0" text="--" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblElvisLakap" layoutX="32.0" layoutY="122.0" prefHeight="26.0" prefWidth="399.0" text="--" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblElvisTur" layoutX="32.0" layoutY="161.0" prefHeight="26.0" prefWidth="498.0" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblElvisBaslık" layoutX="274.0" layoutY="14.0" prefHeight="28.0" prefWidth="214.0" text="---" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblElvisCalgı" layoutX="32.0" layoutY="206.0" prefHeight="26.0" prefWidth="287.0" text="----" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="PaneMancoBilgi" layoutX="38.0" layoutY="263.0" prefHeight="234.0" prefWidth="714.0" visible="false">
+               <children>
+                  <Label fx:id="lblMancoUyruk" layoutX="32.0" layoutY="99.0" prefHeight="26.0" prefWidth="143.0" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMancoLakap" layoutX="32.0" layoutY="142.0" prefHeight="26.0" prefWidth="213.0" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMancoTur" layoutX="32.0" layoutY="181.0" prefHeight="26.0" prefWidth="498.0" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMancoBaslık" layoutX="270.0" layoutY="14.0" prefHeight="28.0" prefWidth="214.0" text="--" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMancoCalgı" layoutX="32.0" layoutY="226.0" prefHeight="26.0" prefWidth="399.0" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="PaneFloydBilgi" layoutX="38.0" layoutY="272.0" prefHeight="253.0" prefWidth="724.0" visible="false">
+               <children>
+                  <Label fx:id="lblFloydUyruk" layoutX="23.0" layoutY="88.0" prefHeight="26.0" prefWidth="143.0" text="--" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFloydUye" layoutX="23.0" layoutY="126.0" prefHeight="26.0" prefWidth="571.0" text="--" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFloydTur" layoutX="23.0" layoutY="170.0" prefHeight="26.0" prefWidth="498.0" text="--" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFloydBaslık" layoutX="287.0" layoutY="8.0" prefHeight="28.0" prefWidth="214.0" text="---" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFloydCalgı" layoutX="23.0" layoutY="213.0" prefHeight="26.0" prefWidth="287.0" text="--" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PaneMagaza" layoutX="-2.0" layoutY="4.0" prefHeight="562.0" prefWidth="868.0" visible="false">
+         <children>
+            <ImageView fitHeight="116.0" fitWidth="125.0" layoutX="35.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/ElvisGoldRecorResim.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Label layoutX="262.0" prefHeight="64.0" prefWidth="302.0" text="Music House" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="43.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="162.0" fitWidth="170.0" layoutX="302.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/ElvisTheBestOfResim.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="129.0" fitWidth="129.0" layoutX="644.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/ElvisUkuleleResim.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="162.0" fitWidth="176.0" layoutX="628.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/PinkFloydTheWallResim.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="156.0" fitWidth="162.0" layoutX="14.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/PinkFloydTheDarkSiderResim.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="129.0" fitWidth="129.0" layoutX="311.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/PinkFloydGitarTabResim.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="129.0" fitWidth="138.0" layoutX="645.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/BarışMançoSaklaResim.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="170.0" fitWidth="170.0" layoutX="307.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/BarışMançoYedidenSonsuzResim.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="162.0" fitWidth="156.0" layoutX="14.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/BarışMançoTabloResim.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/MağazaSepetSimge.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="595.0" layoutY="516.0" mnemonicParsing="false" onAction="#btnOdemeEkranınaGec" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: fff;" text="Ödeme Ekranı">
+               <effect>
+                  <InnerShadow choke="0.55" height="36.26" radius="31.375" width="91.24" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="503.0" layoutY="516.0" mnemonicParsing="false" onAction="#btnSepeteEkle" prefHeight="40.0" prefWidth="92.0" style="-fx-background-color: fff;" text="Sepete Ekle">
+               <effect>
+                  <InnerShadow choke="0.55" height="36.26" radius="31.375" width="91.24" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="407.0" layoutY="516.0" mnemonicParsing="false" onAction="#btnSepetiSil" prefHeight="40.0" prefWidth="92.0" style="-fx-background-color: fff;" text="Sepeti Sil">
+               <effect>
+                  <InnerShadow choke="0.55" height="36.26" radius="31.375" width="91.24" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <CheckBox fx:id="chkBarısTablo" layoutX="32.0" layoutY="174.0" mnemonicParsing="false" text="Barış Manço Tablo    " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="chkBarısSonsuz" layoutX="297.0" layoutY="174.0" mnemonicParsing="false" text="Barış Manço 7'den Sonsuza " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="chkFloydDarkside" layoutX="32.0" layoutY="339.0" mnemonicParsing="false" text="Pink Floyd Darkside Moon " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="chkFloydMetot" layoutX="330.0" layoutY="348.0" mnemonicParsing="false" text="Pink Floyd Gitar Metodu " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="chkFloydWall" layoutX="616.0" layoutY="302.0" mnemonicParsing="false" text="Pink Floyd The Wall " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="chkElvisGold" layoutX="35.0" layoutY="493.0" mnemonicParsing="false" text="Elvis Presley Gold Record  " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="chkElvisBest" layoutX="319.0" layoutY="493.0" mnemonicParsing="false" text="Elvis Presley The Best Of " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="chkElvisUkulele" layoutX="628.0" layoutY="462.0" mnemonicParsing="false" text="Elvis Presley Ukulele  " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="chkMancoSaman" layoutX="619.0" layoutY="168.0" mnemonicParsing="false" text="Barış Manço Sakla Samanı  " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PaneOdemeEkran" layoutX="1.0" layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="827.0" style="-fx-background-color: #000000;" visible="false">
+         <children>
+            <ImageView fitHeight="514.0" fitWidth="827.0" layoutX="-7.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/LoginImage.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="827.0">
+               <children>
+                  <Label fx:id="lblKartUzerıIsım" layoutX="379.0" layoutY="240.0" text="--" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblKartNo" layoutX="379.0" layoutY="336.0" text="--" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCvc" layoutX="379.0" layoutY="382.0" text="--" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtKartIsım" layoutX="634.0" layoutY="243.0" promptText="Lütfen Boş bırakmayınız*" style="-fx-background-color: fff;">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </TextField>
+                  <TextField fx:id="txtKartNo" layoutX="634.0" layoutY="341.0" promptText="Lütfen eksiksiz doldurun" style="-fx-background-color: fff;">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </TextField>
+                  <TextField fx:id="txtCVC" layoutX="634.0" layoutY="385.0" promptText="Kartınızın arka kısmında" style="-fx-background-color: fff;">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </TextField>
+                  <Button layoutX="689.0" layoutY="441.0" mnemonicParsing="false" onAction="#OdemeClick" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #22B14C;" text="Ödeme Yap" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="104.0" fitWidth="316.0" layoutX="459.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/OdemeMasVis.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="41.0" fitWidth="308.0" layoutX="408.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/Odeme3luResım.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="14.0" layoutY="390.0" prefHeight="26.0" prefWidth="219.0" text="Ödeme işlemi Sürüyor..." textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <ProgressIndicator layoutX="14.0" layoutY="431.0" />
+                  <ImageView fitHeight="53.0" fitWidth="150.0" layoutX="287.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/reChaptaResim.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="93.0" layoutY="441.0" mnemonicParsing="false" onAction="#GerıDonOdemeClick" prefHeight="31.0" prefWidth="106.0" style="-fx-background-color: fff;" text="Geri Dön" />
+                  <Label fx:id="lblKartUzeriSoyad" layoutX="379.0" layoutY="285.0" text="--" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtKartSoyad" layoutX="634.0" layoutY="288.0" promptText="Lütfen Boş bırakmayınız*" style="-fx-background-color: fff;">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </TextField>
+                  <ImageView fitHeight="106.0" fitWidth="125.0" layoutX="-12.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/SSLImage.png" />
+                     </image>
+                  </ImageView>
+                  <ListView fx:id="ListViewSepetTablo" fixedCellSize="0.0" layoutX="8.0" layoutY="101.0" prefHeight="227.0" prefWidth="332.0" />
+                  <Label layoutX="591.0" layoutY="487.0" text="Sepet Tutarı" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSepetTutarı" layoutX="701.0" layoutY="487.0" text="..." textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label layoutX="11.0" layoutY="3.0" prefHeight="100.0" prefWidth="354.0" text="Music House">
+               <font>
+                  <Font name="Vladimir Script" size="77.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ProgressBar layoutX="14.0" layoutY="546.0" prefHeight="15.0" prefWidth="79.0" />
+      <AnchorPane fx:id="PaneBizeOner" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="829.0" style="-fx-background-color: #000;" visible="false">
+         <children>
+            <ImageView fitHeight="589.0" fitWidth="862.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/company.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblBizHouse" layoutX="21.0" layoutY="13.0" prefHeight="100.0" prefWidth="354.0" text="--">
+               <font>
+                  <Font name="Vladimir Script" size="77.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <ProgressIndicator layoutX="761.0" layoutY="14.0" />
+            <Button layoutX="675.0" layoutY="481.0" mnemonicParsing="false" onAction="#btnUrunOner" prefHeight="34.0" prefWidth="129.0" style="-fx-border-color: fff; -fx-border-radius: 1200; -fx-background-color: transparemt;" text="Ürün Öner" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Pro" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtUrunOner" layoutX="459.0" layoutY="328.0" prefHeight="132.0" prefWidth="345.0" promptText="Önerileriniz bizim için çok değerli..." style="-fx-background-radius: 1200; -fx-border-radius: 66; -fx-border-color: white; -fx-background-color: transparent;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <Glow level="0.0" />
+               </effect></TextField>
+            <Label fx:id="lblbizKim" layoutX="84.0" layoutY="205.0" prefHeight="39.0" prefWidth="130.0" text="--">
+               <font>
+                  <Font size="27.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="lblOmerkdr" layoutX="21.0" layoutY="475.0" prefHeight="39.0" prefWidth="203.0" text="--">
+               <font>
+                  <Font size="27.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="lblMusicHouse" layoutX="84.0" layoutY="256.0" text="--" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Button layoutX="477.0" layoutY="476.0" mnemonicParsing="false" onAction="#btnUrunOnerGeri" prefHeight="34.0" prefWidth="129.0" style="-fx-border-color: fff; -fx-border-radius: 1200; -fx-background-color: transparemt;" text="Geri Dön" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Pro" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneAnket" layoutX="3.0" layoutY="-1.0" prefHeight="575.0" prefWidth="840.0" visible="false">
+         <children>
+            <ImageView fitHeight="568.0" fitWidth="861.0" layoutX="-9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/piano.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="457.0" prefHeight="66.0" prefWidth="344.0" text="Görüşleriniz Bizler İçin Önemli" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblanketZaman" layoutX="62.0" layoutY="170.0" prefHeight="19.0" prefWidth="324.0" text="---">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="lblanketTur" layoutX="62.0" layoutY="88.0" prefHeight="19.0" prefWidth="194.0" text="---">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="lblAnketKonser" layoutX="62.0" layoutY="254.0" prefHeight="19.0" prefWidth="308.0" text="---">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="lblAnketPlat" layoutX="62.0" layoutY="340.0" prefHeight="19.0" prefWidth="346.0" text="---">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <CheckBox fx:id="chkblues" layoutX="62.0" layoutY="128.0" mnemonicParsing="false" text="Blues" textFill="WHITE">
+               <effect>
+                  <Glow />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="chkrock" layoutX="180.0" layoutY="128.0" mnemonicParsing="false" text="Rock" textFill="WHITE">
+               <effect>
+                  <Glow />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="chkpop" layoutX="284.0" layoutY="128.0" mnemonicParsing="false" text="Pop" textFill="WHITE">
+               <effect>
+                  <Glow />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="chkgundog" layoutX="62.0" layoutY="211.0" mnemonicParsing="false" text="Gün Doğarken" textFill="WHITE">
+               <effect>
+                  <Glow />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="chkgunbat" layoutX="180.0" layoutY="211.0" mnemonicParsing="false" text="Gün Batımında" textFill="WHITE">
+               <effect>
+                  <Glow />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="chkgece" layoutX="297.0" layoutY="210.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Gece Yarısı" textFill="WHITE">
+               <effect>
+                  <Glow />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="chkAnketBaris" layoutX="62.0" layoutY="295.0" mnemonicParsing="false" text="Barış Manço" textFill="WHITE">
+               <effect>
+                  <Glow />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="chkAnketElvis" layoutX="180.0" layoutY="295.0" mnemonicParsing="false" text="Elvis Presley" textFill="WHITE">
+               <effect>
+                  <Glow />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="chkAnketPink" layoutX="284.0" layoutY="295.0" mnemonicParsing="false" text="Pink Floyd" textFill="WHITE">
+               <effect>
+                  <Glow />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="chkwalkman" layoutX="62.0" layoutY="387.0" mnemonicParsing="false" text="Sony Walkman" textFill="WHITE">
+               <effect>
+                  <Glow />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="chkspotify" layoutX="180.0" layoutY="387.0" mnemonicParsing="false" text="Spotify" textFill="WHITE">
+               <effect>
+                  <Glow />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="chkyoutube" layoutX="284.0" layoutY="387.0" mnemonicParsing="false" text="Youtube" textFill="WHITE">
+               <effect>
+                  <Glow />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="chksanat" layoutX="367.0" layoutY="128.0" mnemonicParsing="false" text="Türk Sanat Müziği" textFill="WHITE">
+               <effect>
+                  <Glow />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="chkklas" layoutX="521.0" layoutY="128.0" mnemonicParsing="false" text="Klasik" textFill="WHITE">
+               <effect>
+                  <Glow />
+               </effect>
+            </CheckBox>
+            <TextField fx:id="txtAnketFav" layoutX="61.0" layoutY="476.0" prefHeight="27.0" prefWidth="311.0" style="-fx-background-color: transparent; -fx-border-color: fff; -fx-background-radius: 100; -fx-effect: ;" />
+            <Label fx:id="lblAnketFav" layoutX="61.0" layoutY="437.0" prefHeight="19.0" prefWidth="324.0" text="Favori Sanatçı ve Şarkınız ?">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Button layoutX="648.0" layoutY="503.0" mnemonicParsing="false" onAction="#btnsun" prefHeight="52.0" prefWidth="179.0" style="-fx-border-color: fff; -fx-border-radius: 1200; -fx-background-color: transparemt;" text="Anketi Bitir" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Pro" size="23.0" />
+               </font>
+            </Button>
+            <Button layoutX="457.0" layoutY="503.0" mnemonicParsing="false" onAction="#btnktdon" prefHeight="52.0" prefWidth="179.0" style="-fx-border-color: fff; -fx-border-radius: 1200; -fx-background-color: transparemt;" text="Geri Dön" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Pro" size="23.0" />
+               </font>
+            </Button>
+            <ListView fx:id="listAnket" layoutX="497.0" layoutY="204.0" prefHeight="200.0" prefWidth="331.0" style="-fx-background-color: transparent;" />
+            <ProgressIndicator layoutX="14.0" layoutY="529.0" prefHeight="38.0" prefWidth="41.0" />
+            <Button layoutX="652.0" layoutY="447.0" mnemonicParsing="false" onAction="#btnSilAnket" prefHeight="39.0" prefWidth="170.0" style="-fx-border-color: fff; -fx-border-radius: 1200; -fx-background-color: transparemt;" text="Anketi Temizle" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Pro" size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
